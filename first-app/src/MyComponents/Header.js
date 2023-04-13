@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -6,11 +6,11 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const Header = () => {
 
-    const productRef = useRef(null);
+    
 
 
   return (
-    <div ref={productRef}>
+    <div>
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
