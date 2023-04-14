@@ -1,9 +1,14 @@
 
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+
 import React ,{useState} from 'react';
 import Footer from './MyComponents/Footer';
-//import Header from './MyComponents/Header';
+import Header from './MyComponents/Header';
 import Todos from './MyComponents/Todos';
+import AddTodo from './MyComponents/AddTodo';
+
 
 
 
@@ -13,7 +18,7 @@ function App() {
     console.log("I am on Delete of todo",todo)
 
     setTodos(todos.filter((e) =>{
-      return e !== todo;
+      return e !== todo;  
     }))
   }
 
@@ -37,11 +42,12 @@ function App() {
 
   return (
     <>
-    
+    <Header />
+    <AddTodo />
     <Todos todos={todos} onDelete={onDelete}/>
     <Footer />
     </>
   );
-} 
+}
 
 export default App;
