@@ -1,17 +1,23 @@
 
 import './App.css';
+import React ,{useState} from 'react';
 import Footer from './MyComponents/Footer';
 //import Header from './MyComponents/Header';
 import Todos from './MyComponents/Todos';
+
 
 
 function App() {
 
   const onDelete =(todo) =>{
     console.log("I am on Delete of todo",todo)
+
+    setTodos(todos.filter((e) =>{
+      return e !== todo;
+    }))
   }
 
-  let todos = [
+    const [todos, setTodos] =  useState([
     {
       sno :1,
       title : "Go to the marker",
@@ -27,7 +33,7 @@ function App() {
       title : "Go to the ghat",
       desc:"You need to go the market to get this job done"
     }
-  ]
+  ])
 
   return (
     <>
