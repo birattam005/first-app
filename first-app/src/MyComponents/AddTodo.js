@@ -14,7 +14,11 @@ const AddTodo = (props) => {
     if(!title || !desc){
       alert("Title and Description cannot be blank")
     }
-    props.addTodo(title,desc);
+    else{props.addTodo(title,desc);
+      setTitle("");
+      setDesc("");
+     }
+    
   }
 
 
